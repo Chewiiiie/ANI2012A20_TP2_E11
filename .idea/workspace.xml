@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18023946-caf8-4508-890b-6f60d6fa2c43" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CreateSnowman.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExportSnowman.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CreateBody.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SceneMayaTP2_1.mb" beforeDir="false" afterPath="$PROJECT_DIR$/SceneMayaTP2_1.mb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreateSnowman.py" beforeDir="false" afterPath="$PROJECT_DIR$/CreateSnowman.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +46,7 @@
       <workItem from="1607253956262" duration="3559000" />
       <workItem from="1607262743408" duration="10103000" />
       <workItem from="1607273013877" duration="8271000" />
+      <workItem from="1607381031190" duration="3052000" />
     </task>
     <servers />
   </component>

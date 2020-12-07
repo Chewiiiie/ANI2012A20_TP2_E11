@@ -1,4 +1,5 @@
 import sys
+import random
 import maya.cmds as cmds
 
 # Definition des constantes
@@ -6,6 +7,8 @@ subDivisionsX = 13
 subDivisionsY = 13
 subDivisionsZ = 13
 offset = [0, 2, 0]
+snowmanID = random.randint(235, 846)
+sets = []
 
 # Definition des parties du corps
 bodyParts = []
@@ -128,44 +131,62 @@ def attribute_connect(node_name1, attribute_name1, node_name2, attribute_name2):
 
 def spheres_instantiate(part, rads, dest):
     """Fonction pour creer des spheres en serie"""
-    
-    print type(rads)
+
+    names = []
 
     for i, r in enumerate(rads):
         n = "{}_sphere_{}".format(part, i)
+        names.append(n)
 
         print("\t\t<Creation de la sphere : {} de rayon {}>".format(n, r))
         dest.append(cmds.polySphere(n=n, sx=subDivisionsX, sy=subDivisionsY, r=r))
 
+    sets.append(cmds.sets(names, n=part))
+
 
 def cylinders_instantiate(part, dims, dest):
-    """Fonction pour creer des spheres en serie"""
+    """Fonction pour creer des cylindres en serie"""
+
+    names = []
 
     for i, d in enumerate(dims):
         n = "{}_cylinder_{}".format(part, i)
+        names.append(n)
 
         print("\t\t<Creation du cylindre : {} de dimension {}>".format(n, d))
         dest.append(cmds.polyCylinder(n=n, sx=subDivisionsX, sy=subDivisionsY, sz=subDivisionsZ, r=d[0], h=d[1]))
 
+    sets.append(cmds.sets(names, n=part))
+
 
 def cone_instantiate(part, dims, dest):
-    """Fonction pour creer des spheres en serie"""
+    """Fonction pour creer des cones en serie"""
+
+    names = []
 
     for i, d in enumerate(dims):
         n = "{}_cone_{}".format(part, i)
+        names.append(n)
 
         print("\t\t<Creation du cone : {} de dimension {}>".format(n, d))
         dest.append(cmds.polyCone(n=n, sx=subDivisionsX, sy=subDivisionsY, sz=subDivisionsZ, r=d[0], h=d[1]))
 
+    sets.append(cmds.sets(names, n=part))
+
 
 def torus_instantiate(part, dims, dest):
-    """Fonction pour creer des spheres en serie"""
+    """Fonction pour creer des anneaux en serie"""
+
+    names = []
 
     for i, d in enumerate(dims):
         n = "{}_torus_{}".format(part, i)
+        names.append(n)
 
         print("\t\t<Creation de l'anneau : {} de dimension {}>".format(n, d))
         dest.append(cmds.polyTorus(n=n, sx=subDivisionsX, sy=subDivisionsY, r=d[0], sr=d[1]))
+
+    sets.append(cmds.sets(names, n=part))
 
 
 def validate_pools(dims, pos):
@@ -179,22 +200,24 @@ def validate_pools(dims, pos):
 
 def instantiate(part, type, dimensions, positions, destination):
     """Fonction generale d'instantiation"""
-    print("\t<{}: Debut de l'instantiation>".format(part))
+    o_id = part + "_" + str(snowmanID)
+
+    print("\t<{}: Debut de l'instantiation>".format(o_id))
 
     validate_pools(dimensions, positions)
 
     if type == "sphere":
-        spheres_instantiate(part, dimensions, destination)
+        spheres_instantiate(o_id, dimensions, destination)
     elif type == "cylinder":
-        cylinders_instantiate(part, dimensions, destination)
+        cylinders_instantiate(o_id, dimensions, destination)
     elif type == "cone":
-        cone_instantiate(part, dimensions, destination)
+        cone_instantiate(o_id, dimensions, destination)
     elif type == "torus":
-        torus_instantiate(part, dimensions, destination)
+        torus_instantiate(o_id, dimensions, destination)
     else:
         print("\t<ERROR: No function found>")
 
-    print("\t<{}: Instantiation terminee>\n".format(part))
+    print("\t<{}: Instantiation terminee>\n".format(o_id))
 
 
 def objects_place(objs, pos):
@@ -234,6 +257,8 @@ def identify(elements):
 
 
 if __name__ == "__main__":
+    name = "Snowman_" + str(snowmanID)
+
     # Creation du corps
     print("\n\n\n<Debut de la creation du corps>\n====\n")
     instantiate("body", "sphere", bodyRadius, bodyPositions, bodyParts)
@@ -286,5 +311,5 @@ if __name__ == "__main__":
     objects_rotate(scarf, scarfRotations)
     identify(scarf)
     print("<Fin de la creation de l'echarpe>\n====\n")
-    
-    
+
+    cmds.sets(sets, n=name)
