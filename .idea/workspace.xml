@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="18023946-caf8-4508-890b-6f60d6fa2c43" name="Default Changelist" comment="" />
+    <list default="true" id="18023946-caf8-4508-890b-6f60d6fa2c43" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/CreateSnowman.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExportSnowman.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreateBody.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SceneMayaTP2_1.mb" beforeDir="false" afterPath="$PROJECT_DIR$/SceneMayaTP2_1.mb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +33,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -38,25 +44,15 @@
       <option name="presentableId" value="Default" />
       <updated>1607118287219</updated>
       <workItem from="1607118289236" duration="5963000" />
-      <workItem from="1607196274994" duration="1681000" />
+      <workItem from="1607196274994" duration="3317000" />
+      <workItem from="1607253214418" duration="285000" />
+      <workItem from="1607253956262" duration="3559000" />
+      <workItem from="1607262743408" duration="10103000" />
+      <workItem from="1607273013877" duration="8271000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="548" y="173" key="FileChooserDialogImpl" timestamp="1607118475146">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="548" y="173" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1607118475146" />
-    <state x="277" y="77" key="SettingsEditor" timestamp="1607124432567">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1607124432567" />
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1607125120821">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1607125120821" />
   </component>
 </project>
