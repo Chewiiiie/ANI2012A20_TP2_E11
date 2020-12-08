@@ -3,6 +3,7 @@ import random
 import maya.cmds as cmds
 
 # Definition des constantes
+prefix = "Snowman_"
 subDivisionsX = 13
 subDivisionsY = 13
 subDivisionsZ = 13
@@ -257,7 +258,7 @@ def identify(elements):
 
 
 if __name__ == "__main__":
-    name = "Snowman_" + str(snowmanID)
+    name = prefix + str(snowmanID)
 
     # Creation du corps
     print("\n\n\n<Debut de la creation du corps>\n====\n")
